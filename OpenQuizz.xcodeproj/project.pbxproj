@@ -13,6 +13,7 @@
 		201106EF2620919600E95E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201106ED2620919600E95E82 /* Main.storyboard */; };
 		201106F12620919800E95E82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201106F02620919800E95E82 /* Assets.xcassets */; };
 		201106F42620919800E95E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201106F22620919800E95E82 /* LaunchScreen.storyboard */; };
+		20E1E61B2625ECC1003D8612 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20E1E61A2625ECC1003D8612 /* Balham.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		201106F02620919800E95E82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201106F32620919800E95E82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		201106F52620919800E95E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20E1E61A2625ECC1003D8612 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				201106E92620919600E95E82 /* SceneDelegate.swift */,
 				201106EB2620919600E95E82 /* ViewController.swift */,
 				201106ED2620919600E95E82 /* Main.storyboard */,
+				20E1E61A2625ECC1003D8612 /* Balham.otf */,
 				201106F02620919800E95E82 /* Assets.xcassets */,
 				201106F22620919800E95E82 /* LaunchScreen.storyboard */,
 				201106F52620919800E95E82 /* Info.plist */,
@@ -126,6 +129,7 @@
 			files = (
 				201106F42620919800E95E82 /* LaunchScreen.storyboard in Resources */,
 				201106F12620919800E95E82 /* Assets.xcassets in Resources */,
+				20E1E61B2625ECC1003D8612 /* Balham.otf in Resources */,
 				201106EF2620919600E95E82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
