@@ -15,6 +15,7 @@
 		201106F42620919800E95E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201106F22620919800E95E82 /* LaunchScreen.storyboard */; };
 		20B2BD972628377600222C41 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2BD962628377600222C41 /* Game.swift */; };
 		20B2BD9A262881A500222C41 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2BD99262881A500222C41 /* QuestionManager.swift */; };
+		20B2BD9F262F1A3100222C41 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2BD9E262F1A3100222C41 /* QuestionView.swift */; };
 		20E1E61B2625ECC1003D8612 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20E1E61A2625ECC1003D8612 /* Balham.otf */; };
 		20E1E622262723AC003D8612 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E1E621262723AC003D8612 /* Question.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		201106F52620919800E95E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B2BD962628377600222C41 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		20B2BD99262881A500222C41 /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		20B2BD9E262F1A3100222C41 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		20E1E61A2625ECC1003D8612 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Balham.otf; path = "OpenQuizz/Supporting Files/Balham.otf"; sourceTree = SOURCE_ROOT; };
 		20E1E621262723AC003D8612 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				201106ED2620919600E95E82 /* Main.storyboard */,
+				20B2BD9E262F1A3100222C41 /* QuestionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				201106EC2620919600E95E82 /* ViewController.swift in Sources */,
 				20B2BD972628377600222C41 /* Game.swift in Sources */,
 				20E1E622262723AC003D8612 /* Question.swift in Sources */,
+				20B2BD9F262F1A3100222C41 /* QuestionView.swift in Sources */,
 				201106E82620919600E95E82 /* AppDelegate.swift in Sources */,
 				201106EA2620919600E95E82 /* SceneDelegate.swift in Sources */,
 				20B2BD9A262881A500222C41 /* QuestionManager.swift in Sources */,
