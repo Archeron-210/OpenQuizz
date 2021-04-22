@@ -28,7 +28,7 @@ class QuestionView: UIView {
             backgroundColor = #colorLiteral(red: 0.9522046447, green: 0.5272625685, blue: 0.5785809159, alpha: 1)
             icon.image = #imageLiteral(resourceName: "Icon Error")
             icon.isHidden = false
-        case . standard:
+        case .standard:
             backgroundColor = #colorLiteral(red: 0.7497624755, green: 0.7689997554, blue: 0.7860534191, alpha: 1)
             icon.isHidden = true
         }

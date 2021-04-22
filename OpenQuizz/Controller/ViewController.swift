@@ -16,12 +16,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let name = Notification.Name(rawValue: "QuestionsLoaded")
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(questionsLoaded),
+            name: name, object: nil)
+        startNewGame()
     }
+
+    @objc func questionsLoaded() {
+        activityIndicator.isHidden = true
+        newGameButton.isHidden = false
+        questionView.title = game.currentQuestion.title
+    }
+    
     @IBAction func didTapNewGameButton() {
        startNewGame()
     }
    
+    var game = Game()
     
     private func startNewGame() {
         activityIndicator.isHidden = false
@@ -31,7 +43,6 @@ class ViewController: UIViewController {
         questionView.style = .standard
 
         scoreLabel.text = "0 / 10"
+        game.refresh()
     }
-
 }
-

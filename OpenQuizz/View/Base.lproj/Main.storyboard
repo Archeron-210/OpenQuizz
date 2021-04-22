@@ -72,7 +72,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="4qD-7r-2lk" id="gAc-Gb-Jb6"/>
                         <outlet property="newGameButton" destination="vMa-mp-CWr" id="9Wh-wW-Fyp"/>
-                        <outlet property="questionView" destination="LUb-AL-oOe" id="yFQ-Vx-2aY"/>
+                        <outlet property="questionView" destination="yHl-O6-NlB" id="fHz-Y8-hOD"/>
                         <outlet property="scoreLabel" destination="QDs-3D-R04" id="SQx-eV-inf"/>
                     </connections>
                 </viewController>
