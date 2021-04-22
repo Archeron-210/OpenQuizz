@@ -21,6 +21,9 @@ class ViewController: UIViewController {
             self, selector: #selector(questionsLoaded),
             name: name, object: nil)
         startNewGame()
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
+        questionView.addGestureRecognizer(panGestureRecognizer)
     }
 
     @objc func questionsLoaded() {
@@ -45,4 +48,25 @@ class ViewController: UIViewController {
         scoreLabel.text = "0 / 10"
         game.refresh()
     }
+    
+    @objc func dragQuestionView(_ sender: UIPanGestureRecognizer) {
+        if game.state == .ongoing {
+            switch sender.state {
+            case .began, .changed:
+                transformQuestionViewWith(gesture: sender)
+            case .ended, .cancelled:
+                answerQuestion()
+            default:
+                break
+            }
+        }
+    }
+    
+    private func transformQuestionViewWith(gesture : UIPanGestureRecognizer){
+        
+    }
+    private func answerQuestion(){
+        
+    }
+    
 }
