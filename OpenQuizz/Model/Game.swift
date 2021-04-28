@@ -1,6 +1,4 @@
-
 import Foundation
-
 
 class Game {
     var score = 0

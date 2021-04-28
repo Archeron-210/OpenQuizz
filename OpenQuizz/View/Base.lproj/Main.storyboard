@@ -1,30 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Balham.otf">
-            <string>Balham</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-mp-CWr">
-                                <rect key="frame" x="107" y="633" width="200" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.40601399539999999" green="0.55205929279999999" blue="0.76473313570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4qD-7r-2lk">
+                                <rect key="frame" x="188.66666666666666" y="783.66666666666663" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="DX9-Jz-5dg"/>
+                                    <constraint firstAttribute="width" constant="37" id="OnR-pM-pQl"/>
+                                    <constraint firstAttribute="height" constant="37" id="jE3-gM-eEy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="uGJ-lu-T8b"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDs-3D-R04">
+                                <rect key="frame" x="57" y="495" width="300" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="oVr-4S-15u"/>
+                                    <constraint firstAttribute="height" constant="33" id="xIk-1T-jmI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-O6-NlB" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                <rect key="frame" x="62" y="86" width="290" height="290"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="LWD-se-8tr">
+                                        <rect key="frame" x="127" y="247" width="36" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="T2Q-zk-5gW"/>
+                                            <constraint firstAttribute="width" secondItem="LWD-se-8tr" secondAttribute="height" multiplier="36:35" id="wcO-yd-Mye"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où est passé le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUb-AL-oOe">
+                                        <rect key="frame" x="8" y="8" width="274" height="274"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098234419999998" green="0.2509769201" blue="0.25098058579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="LWD-se-8tr" firstAttribute="centerX" secondItem="yHl-O6-NlB" secondAttribute="centerX" id="BOe-4r-n62"/>
+                                    <constraint firstAttribute="width" secondItem="yHl-O6-NlB" secondAttribute="height" multiplier="1:1" id="Cmk-p2-3uM"/>
+                                    <constraint firstItem="LUb-AL-oOe" firstAttribute="leading" secondItem="yHl-O6-NlB" secondAttribute="leading" constant="8" id="GAM-rQ-tR9"/>
+                                    <constraint firstAttribute="trailing" secondItem="LUb-AL-oOe" secondAttribute="trailing" constant="8" id="KZg-wz-SS8"/>
+                                    <constraint firstAttribute="bottom" secondItem="LUb-AL-oOe" secondAttribute="bottom" constant="8" id="Kej-0T-YYy"/>
+                                    <constraint firstItem="LUb-AL-oOe" firstAttribute="top" secondItem="yHl-O6-NlB" secondAttribute="top" constant="8" id="QL6-mh-Bzk"/>
+                                    <constraint firstAttribute="width" constant="290" id="cK3-ZW-dSK"/>
+                                    <constraint firstAttribute="bottom" secondItem="LWD-se-8tr" secondAttribute="bottom" constant="8" id="ty6-Dq-4Vi"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="LWD-se-8tr" id="csK-PW-TdY"/>
+                                    <outlet property="label" destination="LUb-AL-oOe" id="cs0-l5-0i9"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-mp-CWr">
+                                <rect key="frame" x="107" y="762" width="200" height="80"/>
+                                <color key="backgroundColor" red="0.25098234419999998" green="0.2509769201" blue="0.25098058579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Bzr-ge-czw"/>
+                                    <constraint firstAttribute="height" constant="80" id="pLS-oJ-8vl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -32,42 +82,20 @@
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="12N-9w-BzT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDs-3D-R04">
-                                <rect key="frame" x="67" y="318" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-O6-NlB" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="67" y="20" width="290" height="290"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="LWD-se-8tr">
-                                        <rect key="frame" x="127" y="247" width="36" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Où est passé le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUb-AL-oOe">
-                                        <rect key="frame" x="19" y="0.0" width="263" height="266"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.75327831509999998" green="0.76832169289999996" blue="0.78431683780000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <outlet property="icon" destination="LWD-se-8tr" id="csK-PW-TdY"/>
-                                    <outlet property="label" destination="LUb-AL-oOe" id="cs0-l5-0i9"/>
-                                </connections>
-                            </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4qD-7r-2lk">
-                                <rect key="frame" x="189" y="656" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.35488298540000002" green="0.41788816449999999" blue="0.50197285410000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.16858875749999999" green="0.16071411969999999" blue="0.1647063792" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QDs-3D-R04" firstAttribute="top" secondItem="LUb-AL-oOe" secondAttribute="bottom" constant="127" id="3Au-iA-CBK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vMa-mp-CWr" secondAttribute="bottom" constant="20" id="6pd-w2-Ztj"/>
+                            <constraint firstItem="QDs-3D-R04" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6z9-Sn-xEq"/>
+                            <constraint firstItem="yHl-O6-NlB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="8Ej-SZ-MTi"/>
+                            <constraint firstItem="yHl-O6-NlB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRc-2a-4kS"/>
+                            <constraint firstItem="vMa-mp-CWr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G5k-bf-u85"/>
+                            <constraint firstItem="4qD-7r-2lk" firstAttribute="centerY" secondItem="vMa-mp-CWr" secondAttribute="centerY" id="Gf1-6T-EXG"/>
+                            <constraint firstItem="vMa-mp-CWr" firstAttribute="top" secondItem="QDs-3D-R04" secondAttribute="bottom" constant="234" id="uBM-IG-N3v"/>
+                            <constraint firstItem="4qD-7r-2lk" firstAttribute="centerX" secondItem="vMa-mp-CWr" secondAttribute="centerX" id="vPH-Eu-8fc"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="4qD-7r-2lk" id="gAc-Gb-Jb6"/>
@@ -78,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="93.75"/>
+            <point key="canvasLocation" x="-793" y="-283"/>
         </scene>
     </scenes>
     <resources>
