@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="sxV-Ke-W7a">
-                                <rect key="frame" x="86.5" y="303" width="241" height="290"/>
+                                <rect key="frame" x="391.5" y="538" width="241" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sxV-Ke-W7a" secondAttribute="height" multiplier="241:290" id="G51-IO-TcC"/>
                                     <constraint firstAttribute="height" constant="290" id="Htv-GQ-RUF"/>
@@ -27,18 +27,60 @@
                                     <constraint firstAttribute="width" secondItem="sxV-Ke-W7a" secondAttribute="height" multiplier="241:290" id="vBY-EI-vJ5"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEy-W1-uWA">
+                                <rect key="frame" x="422.5" y="1279" width="179" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="h3k-Ty-LaK"/>
+                                    <constraint firstAttribute="width" constant="179" id="oTC-un-uGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="h3k-Ty-LaK"/>
+                                        <exclude reference="oTC-un-uGT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="h3k-Ty-LaK"/>
+                                        <include reference="oTC-un-uGT"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.35488298540000002" green="0.41788816449999999" blue="0.50197285410000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.16858875749999999" green="0.16071411969999999" blue="0.1647063792" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="sxV-Ke-W7a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ITa-XW-sgG"/>
                             <constraint firstItem="sxV-Ke-W7a" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Phm-SY-ySs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cEy-W1-uWA" secondAttribute="bottom" constant="20" id="YKJ-Go-Xxh"/>
+                            <constraint firstItem="cEy-W1-uWA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cju-Kp-osm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cEy-W1-uWA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="YKJ-Go-Xxh"/>
+                                <exclude reference="cju-Kp-osm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="cEy-W1-uWA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="YKJ-Go-Xxh"/>
+                                <include reference="cju-Kp-osm"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-345" y="370"/>
         </scene>
     </scenes>
     <resources>

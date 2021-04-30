@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4qD-7r-2lk">
-                                <rect key="frame" x="597.66666666666663" y="293.66666666666669" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="783.5" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="DX9-Jz-5dg"/>
                                     <constraint firstAttribute="width" secondItem="4qD-7r-2lk" secondAttribute="height" multiplier="1:1" id="Mtt-aE-zXH"/>
@@ -28,42 +28,54 @@
                                 <variation key="heightClass=compact" hidden="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-mp-CWr">
-                                <rect key="frame" x="516" y="272" width="200" height="80"/>
+                                <rect key="frame" x="107" y="762" width="200" height="80"/>
                                 <color key="backgroundColor" red="0.25098234419999998" green="0.2509769201" blue="0.25098058579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="AYr-AW-lK4"/>
+                                    <constraint firstAttribute="width" constant="200" id="AYr-AW-lK4">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="80" id="tzj-z8-hwt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="44"/>
+                                </variation>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="12N-9w-BzT"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-O6-NlB" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="20" y="62" width="290" height="290"/>
+                                <rect key="frame" x="62" y="84" width="290" height="290"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="LWD-se-8tr">
                                         <rect key="frame" x="127" y="247" width="36" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="IOG-c7-h5C"/>
-                                            <constraint firstAttribute="width" constant="36" id="T2Q-zk-5gW"/>
+                                            <constraint firstAttribute="width" constant="36" id="T2Q-zk-5gW">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                            </constraint>
                                             <constraint firstAttribute="width" secondItem="LWD-se-8tr" secondAttribute="height" multiplier="36:35" id="aZa-of-rHc"/>
                                             <constraint firstAttribute="width" secondItem="LWD-se-8tr" secondAttribute="height" multiplier="36:35" id="wcO-yd-Mye"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où est passé le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUb-AL-oOe">
                                         <rect key="frame" x="8" y="8" width="274" height="274"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="29"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="45"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098234419999998" green="0.2509769201" blue="0.25098058579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="RNt-dN-Czv"/>
+                                    <constraint firstAttribute="width" constant="290" id="RNt-dN-Czv">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
                                     <constraint firstItem="LWD-se-8tr" firstAttribute="centerX" secondItem="yHl-O6-NlB" secondAttribute="centerX" id="UhZ-RB-BF8"/>
                                     <constraint firstAttribute="bottom" secondItem="LWD-se-8tr" secondAttribute="bottom" constant="8" id="VHW-df-fYW"/>
                                     <constraint firstAttribute="bottom" secondItem="LUb-AL-oOe" secondAttribute="bottom" constant="8" id="X2D-Tp-KgL"/>
@@ -78,7 +90,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDs-3D-R04">
-                                <rect key="frame" x="516" y="62" width="200" height="33"/>
+                                <rect key="frame" x="57" y="413" width="300" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="9aY-T2-hFR"/>
                                     <constraint firstAttribute="height" constant="33" id="ibb-ir-yWy"/>
@@ -90,6 +102,9 @@
                                     <mask key="constraints">
                                         <exclude reference="9aY-T2-hFR"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="40"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -118,9 +133,9 @@
                                 <exclude reference="pBJ-IP-0lB"/>
                                 <exclude reference="DqN-hc-3kV"/>
                                 <exclude reference="Zaj-Cs-cHO"/>
-                                <exclude reference="1KH-Bc-Hjl"/>
                                 <exclude reference="Csn-De-Vmu"/>
                                 <exclude reference="WEx-Tr-wLZ"/>
+                                <exclude reference="1KH-Bc-Hjl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -132,12 +147,12 @@
                                 <exclude reference="XKB-nw-xEJ"/>
                                 <include reference="Zaj-Cs-cHO"/>
                                 <exclude reference="x3Q-HR-DY9"/>
-                                <include reference="1KH-Bc-Hjl"/>
-                                <exclude reference="phG-x7-P9l"/>
                                 <include reference="Csn-De-Vmu"/>
                                 <exclude reference="Rvy-Kr-d9z"/>
                                 <include reference="WEx-Tr-wLZ"/>
                                 <exclude reference="exb-de-ViN"/>
+                                <include reference="1KH-Bc-Hjl"/>
+                                <exclude reference="phG-x7-P9l"/>
                             </mask>
                         </variation>
                     </view>
@@ -150,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-972" y="-106"/>
+            <point key="canvasLocation" x="-1406" y="-283"/>
         </scene>
     </scenes>
     <resources>
